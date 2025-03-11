@@ -1,0 +1,9 @@
+Test Officer Name =
+ 
+ CALCULATE(
+    FIRSTNONBLANK ( 'Contact - Employee'[Name], 1 ),
+    FILTER (
+        'Contact - Employee',
+        'Contact - Employee'[Id] = Observation[Supervisor__c]
+    ),  REMOVEFILTERS()
+)
